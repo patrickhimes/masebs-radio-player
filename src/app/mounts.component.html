@@ -1,0 +1,12 @@
+<radio [source]="selectedSource"></radio>
+<div class="mount" *ngIf="sources?.length > 1">
+  <span class="mount-label">{{selectedSource?.server_description}}</span>
+  <div class="mount-list">
+    <div class="mount-li" *ngFor="let source of sources" (click)="onSelect(source)">
+      {{source.server_description}}
+    </div>
+    </div>
+</div>
+<div class="mount" *ngIf="sources?.length == 1">
+  {{selectedSource?.server_description}}
+</div>

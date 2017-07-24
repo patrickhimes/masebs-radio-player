@@ -1,0 +1,11 @@
+<div class="radio-player" *ngIf="source" >
+    <div class="album-art">
+        <img src="{{album_art}}">
+    </div>
+    <div class="artist">{{source.artist}}</div>         
+    <div class="title">{{source.title}}</div>
+    <div class="visualizer">
+       <visualizer [audio]="audioPlayer"></visualizer>
+    </div>
+    <div id="toggle-radio-button" [ngClass]="{'playing': isPlaying, 'stopped': !isPlaying }" (click)="togglePlayer()">Play/Pause</div>
+</div>

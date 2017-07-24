@@ -1,0 +1,58 @@
+.radio-player{
+    display: grid;
+    padding: 4px;
+    margin: 0px;
+    grid-gap: 4px;
+    grid-template-columns: 1fr 100fr 1fr; 
+    grid-template-areas:
+        "art title title "
+        "art artist artist "
+        "art . . "
+        "sfx sfx  btn ";
+  
+    background:#333; 
+    color: #e5f8ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.visualizer {
+    grid-area: sfx;
+}
+.artist {
+    grid-area: artist;
+}
+.title {
+    grid-area: title;
+}
+.album-art {
+    grid-area: art;
+}
+.album-art img {
+    width: 128px;
+    height: 128px;
+}
+#toggle-radio-button {
+    grid-area: btn;
+    width: 32px;
+    height: 32px;
+	background: url('../assets/svg/play-stop-buttons.svg') no-repeat #e5f8ff;
+    background-size: 64px;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+#toggle-radio-button.playing{
+    background-position-x: 0px;
+}
+#toggle-radio-button.stopped{
+    background-position-x: 100%;
+}
+#visualizer_render{ 
+    width:100%; 
+    height:32px; 
+    background:#006d91; 
+    border-radius: 2px;
+}

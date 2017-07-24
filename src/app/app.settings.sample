@@ -1,0 +1,9 @@
+export class AppSettings {
+    public static LASTFM_APIURL = 'http://ws.audioscrobbler.com/2.0/';
+    public static LASTFM_APIKEY='';
+
+    public static ICECAST_APIURL = 'http://127.0.0.1:8000';
+    
+    public static DEFAULT_ALBUM_ART = '../assets/default_album_art.png';
+
+}
